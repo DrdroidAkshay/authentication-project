@@ -24,7 +24,9 @@ const ProfileForm = () => {
       }
     ).then((res) => {
       console.log(res);
-      history.replace("/");
+      if (res.ok) {
+        history.replace("/");
+      }
     });
   };
   return (
